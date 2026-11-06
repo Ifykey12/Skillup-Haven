@@ -1,20 +1,30 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# SkillUp Haven
+Responsive learning academy website built with React, Vite, TypeScript, Motion and Supabase.
 
-# Run and deploy your AI Studio app
+## Features
+- Responsive landing page based on the supplied visual reference
+- Blue, light-blue, white, yellow, pink and black brand palette
+- Bricolage Grotesque typography and subtle motion
+- Supabase email/password sign-up and login
+- Published course loading and enrolment requests
+- Contact enquiries saved in Supabase
 
-This contains everything you need to run your app locally.
+## Local setup
+1. Install Node.js.
+2. Run `npm install`.
+3. Copy `.env.example` to `.env`.
+4. Add your Supabase project URL and publishable key.
+5. Run `npm run dev`.
 
-View your app in AI Studio: https://ai.studio/apps/61b2e5d6-fb57-44c3-b3fd-7490ac449b9b
+Never expose a Supabase secret/service-role key in browser code.
 
-## Run Locally
+## Existing Supabase database
+The connected project already has profiles, courses, ebooks, enquiries, enrollments, notifications and tasks tables with RLS enabled. This app uses the existing schema fields `enquiries.full_name` and `enrollments.student_id`. The current public enquiry policy and course policies are already present.
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Before launch
+- Replace the text logo with the official SkillUp Haven logo.
+- Set real social links and contact information.
+- Add course and ebook content.
+- Configure Supabase Auth email confirmation and redirect URLs.
+- Configure storage policies before distributing paid ebook files.
+- Test signup, login, enquiry and course enrolment with a test account.
